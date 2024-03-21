@@ -1,0 +1,102 @@
+@use "mixins";
+
+.container--roomTitle {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  color: #fafafa;
+  background-color: #0a0a0a;
+  z-index: 10;
+
+  h3 {
+    margin: 0;
+  }
+  // box-shadow: -8px 30px 10px rgb(255, 255, 255);
+}
+
+.container--messagesList {
+  margin: 10px;
+
+  .container--messagesList__scrollbehavior::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container--messagesList__scrollbehavior {
+    height: calc(100vh - (80px * 2));
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    .messagesList {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      .container--messageSent {
+        @include mixins.flex(column, end, end);
+        max-width: 70%;
+        margin-left: auto;
+      }
+      .container--messageRecieved {
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+.container--messageInput {
+  @include mixins.flex(row, center, stretch);
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+  bottom: 0;
+  left: 0;
+
+  background-color: #0a0a0a;
+  box-shadow: 0px 11px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container--messageUserAndTime {
+  display: flex;
+  gap: 10px;
+}
+
+.container--deleteAndEditButtons {
+  display: flex;
+  gap: 3px;
+  position: absolute;
+  visibility: hidden;
+  padding: 2px;
+  top: 0;
+  right: 7%;
+  transform: translateY(-100%);
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  background-color: rgb(172, 130, 130);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container--editModeMessage {
+  @include mixins.flex(column, center, start);
+  gap: 4px;
+  max-width: 100%;
+  .container--saveAndCancelButtons {
+    @include mixins.flex(row, center, center);
+    gap: 3px;
+    margin-left: auto;
+  }
+}
+
+.chat-container {
+  background-color: #27272a;
+}

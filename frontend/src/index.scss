@@ -1,0 +1,17 @@
+@use "src/sass/messagesContainers";
+@use "src/sass/messagesButtons";
+@use "src/sass/messagesTexts";
+@use "src/sass/_global.scss";
+@use "src/sass/_nav.scss";
+@use "src/sass/_modal.scss";
+@use "src/sass/_login.scss";
+
+* {
+  font-family: "Montserrat";
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.test {
+  height: 100vh;
+}

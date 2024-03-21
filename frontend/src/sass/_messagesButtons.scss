@@ -1,0 +1,30 @@
+@use "mixins";
+
+.deleteMessageButton,
+.editMessageButton {
+  border: 1px solid black;
+  height: 23px;
+  font-size: 0.9rem;
+  text-align: center;
+  @include mixins.flex(row, center, center);
+}
+
+.textMessageSent:hover .container--deleteAndEditButtons {
+  visibility: visible;
+}
+
+.sendMessageButton {
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  background-color: #0a0a0a;
+  padding: 1rem;
+}
+
+.saveEditButton,
+.cancelEditButton {
+  border: 1px solid black;
+  height: 25px;
+  font-size: 0.9rem;
+  @include mixins.flex(row, center, center);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

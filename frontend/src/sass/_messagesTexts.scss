@@ -1,0 +1,56 @@
+@use "mixins";
+
+.inputTextForMessage {
+  width: 100%;
+  resize: none;
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  white-space: pre-line;
+
+  color: #fafafa;
+  background: #0a0a0a;
+
+  border: 1px solid #fafafa;
+}
+
+.textMessageSent {
+  position: relative;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: rgb(234, 228, 220);
+  overflow-wrap: break-word;
+  white-space: pre-line;
+  font-size: 0.9rem;
+
+  font-weight: 500;
+}
+
+.textMessageRecieved {
+  @extend .textMessageSent;
+  background-color: rgb(220, 229, 234);
+}
+
+.text--userNameForMessage,
+.text--formattedDateForMessage {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+
+  color: #fafafa;
+}
+
+.textarea--editMessage {
+  margin-left: auto;
+  padding: 5px;
+  width: 50%;
+  resize: none;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  background-color: rgb(234, 228, 220);
+  border: 1px solid rgb(135, 53, 53);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+}

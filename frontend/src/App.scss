@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  font-size: 12pt;
+}
+
+.room_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chat_room {
+  width: 175px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10%;
+  margin: 10px;
+  text-align: center;
+}
+
+// Styling som bör flyttas
+
+// Nav styling
